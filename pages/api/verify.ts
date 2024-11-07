@@ -8,7 +8,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const { token } = req.body;
 
         try {
-            const decoded = jwt.verify(token, process.env.JWT_SECRET);
+            // Vérifier que JWT_SECRET est défini et de type string
+            const secret = process.env.JWT_SECRET;
+            if (!secret) {
+                throw new Error("La variable d'environnement JWT_SECRET n'est pas définie.");
+            }
+            const decoded = jwt.verify(token, secret);
             return res.status(200).json({ message: 'Token valide', user: decoded });
         } catch (error) {
             console.error('Erreur de vérification:', error);

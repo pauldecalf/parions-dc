@@ -18,9 +18,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 const passwordMatch = await bcrypt.compare(password, user.password);
 
                 if (passwordMatch) {
+                    // Vérifier que JWT_SECRET est défini et de type string
+                    const secret = process.env.JWT_SECRET;
+                    if (!secret) {
+                        throw new Error("La variable d'environnement JWT_SECRET n'est pas définie.");
+                    }
                     const token = jwt.sign(
                         { userId: user._id, email: user.email },
-                        process.env.JWT_SECRET,
+                        secret,
                         { expiresIn: '1h' }
                     );
 

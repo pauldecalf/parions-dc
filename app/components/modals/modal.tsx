@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import {useState, useEffect, useRef, useCallback} from "react";
 import { useModal } from "@/app/contexte/modalContext";
 
 export default function Modal() {
@@ -10,9 +10,9 @@ export default function Modal() {
     const [errorMessage, setErrorMessage] = useState("");
     const modalRef = useRef(null); // Référence pour le conteneur de la modal
 
-    const close = () => {
+    const close = useCallback(() => {
         setShowModal(false);
-    };
+    }, [setShowModal]);
 
     const handleLogin = async () => {
         try {
@@ -54,7 +54,7 @@ export default function Modal() {
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, []);
+    }, [close]);
 
     return (
         <div

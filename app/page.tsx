@@ -3,7 +3,7 @@
 
 import Modal from "./components/modals/modal";
 import { useModal } from "./contexte/modalContext";
-
+import Image from 'next/image';
 export default function Home() {
   const { showModal } = useModal();
 
@@ -27,7 +27,7 @@ export default function Home() {
                   <h5 className="mb-2 text-2xl font-bold tracking-tight ">Inscris-toi !</h5>
                 </a>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Inscris-toi pour pouvoir parier et
-                  gagner de l'argent.</p>
+                  gagner de l&apos;argent.</p>
               </div>
             </div>
             <div
@@ -69,11 +69,11 @@ export default function Home() {
           <h2 className="block text-4xl font-bold italic mx-auto sm:mx-10">Qui sommes-nous ?</h2>
           <p className="block  font-normal lg:text-2xl mx-5 sm:mx-14 md:mx-24 lg:mx-32">
             <strong>Parions-DC</strong> est une plateforme de paris en ligne qui vous permet de parier sur des
-            événements tel que l'absence de pluie à Paris le 14 juillet 2024, la victoire de l'équipe de France à la
+            événements tel que l&apos;absence de pluie à Paris le 14 juillet 2024, la victoire de l&apos;équipe de France à la
             coupe du monde 2026, ou encore la réélection de Donald Trump en 2024.
             <br/> <br/>
             Vous pouvez parier sur des événements sportifs, politiques, culturels, ou encore sur des événements du
-            quotidien, tel que la météo, la circulation, ou encore l'eventualité de voir Jules arriver à l'heure.
+            quotidien, tel que la météo, la circulation, ou encore l&apos;eventualité de voir Jules arriver à l&apos;heure.
             <br/> <br/>
             Nous ne sommes pas un site de paris en ligne, mais une plateforme de divertissement qui vous permet de
             parier sur des événements du quotidien.
@@ -119,8 +119,8 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-col items-center pb-10">
-                <img className="h-24 aspect-auto mb-3 rounded-full shadow-lg" src="/img/arnaud.jpg"
-                     alt="image d'arnaud"/>
+                <Image  className="h-24 aspect-auto mb-3 rounded-full shadow-lg" src="/img/arnaud.jpg"
+                        alt="image de arnaud"/>
                 <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Arnaud BEAULIEU</h5>
                 <span className="text-sm text-gray-500 dark:text-gray-400">CEO / Développeur Fullstack</span>
                 <div className="flex mt-4 md:mt-6">
@@ -163,7 +163,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-col items-center pb-10">
-                <img className="h-24 aspect-auto mb-3 rounded-full shadow-lg" src="/img/loris.jpg"
+                <Image className="h-24 aspect-auto mb-3 rounded-full shadow-lg" src="/img/loris.jpg"
                      alt="image de loris"/>
                 <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Loris PLANTÉ</h5>
                 <span className="text-sm text-gray-500 dark:text-gray-400">CEO / Développeur Frontend</span>
@@ -207,7 +207,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-col items-center pb-10">
-                <img className="h-24 aspect-auto mb-3 rounded-full shadow-lg" src="/img/paul.webp" alt="image paul"/>
+                <Image className="h-24 aspect-auto mb-3 rounded-full shadow-lg" src="/img/paul.webp" alt="image paul"/>
                 <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Paul DECALF</h5>
                 <span className="text-sm text-gray-500 dark:text-gray-400">CEO / Employé polyvalent</span>
                 <div className="flex mt-4 md:mt-6">
