@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text: #111212;
+  --background: #f8fbfb;
+  --primary: #56b8ae;
+  --secondary: #94e4dc;
+  --accent: #5eebdd;
+  --grey: #F2F7F7;
+  --fade: #DDF4F1;
+}
+:root[data-theme="dark"] {
+  --text: #edeeee;
+  --background: #040606;
+  --primary: #47a99f;
+  --secondary: #1b6a62;
+  --accent: #149f91;
+  --grey: #F2F7F7;
+  --fade: #DDF4F1;
+}
