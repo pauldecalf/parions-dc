@@ -120,7 +120,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-center pb-10">
                 <Image  className="h-24 aspect-auto mb-3 rounded-full shadow-lg" src="/img/arnaud.jpg"
-                        alt="image de arnaud"/>
+                        alt="image de arnaud" width={100} height={100}/>
                 <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Arnaud BEAULIEU</h5>
                 <span className="text-sm text-gray-500 dark:text-gray-400">CEO / Développeur Fullstack</span>
                 <div className="flex mt-4 md:mt-6">
@@ -164,7 +164,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-center pb-10">
                 <Image className="h-24 aspect-auto mb-3 rounded-full shadow-lg" src="/img/loris.jpg"
-                     alt="image de loris"/>
+                     alt="image de loris" width={100} height={100}/>
                 <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Loris PLANTÉ</h5>
                 <span className="text-sm text-gray-500 dark:text-gray-400">CEO / Développeur Frontend</span>
                 <div className="flex mt-4 md:mt-6">
@@ -207,7 +207,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-col items-center pb-10">
-                <Image className="h-24 aspect-auto mb-3 rounded-full shadow-lg" src="/img/paul.webp" alt="image paul"/>
+                <Image className="h-24 aspect-auto mb-3 rounded-full shadow-lg" src="/img/paul.webp" alt="image paul" width={100} height={100}/>
                 <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Paul DECALF</h5>
                 <span className="text-sm text-gray-500 dark:text-gray-400">CEO / Employé polyvalent</span>
                 <div className="flex mt-4 md:mt-6">

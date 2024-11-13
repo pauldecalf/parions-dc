@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Parions-DC
 
-First, run the development server:
+## Description
+**Parions-DC** est une plateforme innovante de paris en ligne développée avec **Next.js**. Ce projet permet aux utilisateurs de parier sur divers événements, que ce soit des événements sportifs, des prévisions météo, ou encore des paris plus créatifs et amusants, comme la ponctualité des étudiants en classe.
 
+L'objectif est de proposer une expérience de divertissement unique où les utilisateurs peuvent placer des paris sur des sujets du quotidien, favorisant ainsi l'interaction et la compétition amicale entre amis ou collègues.
+
+## Fonctionnalités
+- Interface utilisateur moderne et réactive développée avec **Next.js**.
+- **Header dynamique** avec un système d'authentification.
+- **Connexion** sécurisée avec **MongoDB** pour la gestion des comptes utilisateurs.
+- Possibilité de **parier** sur des événements variés avec une interface intuitive.
+- Suivi en temps réel des **statistiques** et des résultats des paris.
+- **Historique des paris** pour chaque utilisateur.
+- **Gestion de profils** utilisateurs avec la possibilité de voir ses gains/pertes.
+
+## Prérequis
+- **Node.js** v18.x ou supérieur
+- **npm** ou **yarn**
+- **MongoDB** pour la base de données
+
+## Installation et utilisation
+
+### 1. Cloner le dépôt
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/pauldecalf/parions-dc.git
+cd parions-dc
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Installer les dépendances
+```bash
+npm install
+# ou avec yarn
+yarn install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Configurer les variables d'environnement
+Créez un fichier `.env.local` à la racine du projet avec les informations suivantes :
+```
+NEXT_PUBLIC_API_URL=https://parions.dc.pauldecalf.fr/api
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/parionsdc?retryWrites=true&w=majority
+JWT_SECRET=your_jwt_secret
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Lancer l'application en mode développement
+```bash
+npm run dev
+# ou avec yarn
+yarn dev
+```
+Accédez à l'application via `http://localhost:3000`.
 
-## Learn More
+### 5. Générer une build de production
+```bash
+npm run build
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies utilisées
+- **Next.js** pour le frontend
+- **MongoDB** pour la base de données
+- **Mongoose** pour la gestion des modèles
+- **JWT** pour l'authentification
+- **React Context API** pour la gestion de l'état
+- **Tailwind CSS** pour le design
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Structure du projet
+```
+├── components
+│   ├── Header.js
+│   ├── AuthForm.js
+├── pages
+│   ├── index.js
+│   ├── login.js
+│   ├── register.js
+│   ├── api
+│       ├── auth
+│           ├── login.js
+│           ├── register.js
+│           ├── logout.js
+├── public
+├── styles
+├── utils
+├── .env.local
+└── README.md
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contribuer
+Les contributions sont les bienvenues ! Si vous souhaitez ajouter des fonctionnalités ou améliorer le code existant, n'hésitez pas à créer une pull request.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fork le projet
+2. Créez une branche (`git checkout -b feature/ajout-fonctionnalité`)
+3. Committez vos modifications (`git commit -m 'Ajouter une nouvelle fonctionnalité'`)
+4. Poussez sur la branche (`git push origin feature/ajout-fonctionnalité`)
+5. Ouvrez une pull request
